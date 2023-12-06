@@ -6,7 +6,7 @@ import Image from '@/components/Image'
 import ViewCounter from '@/components/ViewCounter'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
-import Comments from '../../components/comments'
+import Comments from '../components/Comments/Index'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import {
   FacebookShareButton,

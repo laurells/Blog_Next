@@ -11,17 +11,26 @@ import path from 'path'
 const root = process.cwd()
 
 export async function getStaticPaths() {
-  const tags = await getAllTags('blog')
-
-  return {
-    paths: Object.keys(tags).map((tag) => ({
-      params: {
-        tag,
-      },
-    })),
-    fallback: false,
+    try {
+      const tags = await getAllTags('blog');
+  
+      return {
+        paths: Object.keys(tags).map((tag) => ({
+          params: {
+            tags: String(tag),
+          },
+        })),
+        fallback: false,
+      };
+    } catch (error) {
+      console.error('Error fetching tags:', error);
+      return {
+        paths: [],
+        fallback: false,
+      };
+    }
   }
-}
+  
 
 export async function getStaticProps({ params }) {
   const allPosts = await getAllFilesFrontMatter('blog')

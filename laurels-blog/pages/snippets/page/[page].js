@@ -2,7 +2,7 @@ import { PageSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import SnippetsLayout from '@/layouts/SnippetsLayout'
-import { POSTS_PER_PAGE } from '../../snippets'
+import { POSTS_PER_PAGE } from '../../snippet'
 
 export async function getStaticPaths() {
   const totalPosts = await getAllFilesFrontMatter('snippets')
