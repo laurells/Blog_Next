@@ -18,8 +18,8 @@ export default function FourZeroFour() {
               Unavailable For Legal Reasons
             </p>
             <p className="mb-4">
-              Why show a generic 404 when I can make it sound mysterious? It seems you've found
-              something that used to exist, or you spelled something wrong. I'm guessing you spelled
+              Why show a generic 404 when I can make it sound mysterious? It seems you have found
+              something that used to exist, or you spelled something wrong. I am guessing you spelled
               something wrong. Can you double check that URL?
             </p>
             <p>But dont worry, you can find plenty of other things on our homepage.</p>

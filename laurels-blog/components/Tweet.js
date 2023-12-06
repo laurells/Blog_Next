@@ -1,6 +1,6 @@
 import Image from './Image'
 import { format } from 'date-fns'
-
+import Link from 'next/link'
 /**
  * Supports plain text, images, quote tweets.
  *
@@ -29,7 +29,7 @@ export default function Tweet({
   return (
     <div className=" my-3 w-full max-w-3xl rounded-md border border-gray-100 bg-white px-4 py-4 shadow-sm shadow-gray-300 dark:border-zinc-900 dark:bg-zinc-900 dark:shadow-none">
       <div className="flex items-center">
-        <a className="flex h-12 w-12" href={authorUrl} target="_blank" rel="noopener noreferrer">
+        <Link className="flex h-12 w-12" href={authorUrl} target="_blank" rel="noopener noreferrer">
           <Image
             alt={author.username}
             height={48}
@@ -39,8 +39,8 @@ export default function Tweet({
             blurDataURL="/static/images/SVG-placeholder.png"
             className="rounded-full"
           />
-        </a>
-        <a
+        </Link>
+        <Link
           href={authorUrl}
           target="_blank"
           rel="noopener noreferrer"
@@ -66,15 +66,15 @@ export default function Tweet({
           <span className="!text-gray-500" title={`@${author.username}`}>
             @{author.username}
           </span>
-        </a>
-        <a className="ml-auto" href={authorUrl} target="_blank" rel="noopener noreferrer">
+        </Link>
+        <Link className="ml-auto" href={authorUrl} target="_blank" rel="noopener noreferrer">
           <svg viewBox="328 355 335 276" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M 630, 425    A 195, 195 0 0 1 331, 600    A 142, 142 0 0 0 428, 570    A  70,  70 0 0 1 370, 523    A  70,  70 0 0 0 401, 521    A  70,  70 0 0 1 344, 455    A  70,  70 0 0 0 372, 460    A  70,  70 0 0 1 354, 370    A 195, 195 0 0 0 495, 442    A  67,  67 0 0 1 611, 380    A 117, 117 0 0 0 654, 363    A  65,  65 0 0 1 623, 401    A 117, 117 0 0 0 662, 390    A  65,  65 0 0 1 630, 425    Z"
               style={{ fill: '#3BA9EE' }}
             />
           </svg>
-        </a>
+        </Link>
       </div>
       <div className="mt-4 mb-1 whitespace-pre-wrap leading-normal  !text-gray-700 dark:!text-gray-200">
         {formattedText}
@@ -102,7 +102,7 @@ export default function Tweet({
         </div>
       ) : null}
       {quoteTweet ? <Tweet {...quoteTweet} /> : null}
-      <a
+      <Link
         className="text-sm !text-gray-500 hover:!underline"
         href={tweetUrl}
         target="_blank"
@@ -111,9 +111,9 @@ export default function Tweet({
         <time title={`Time Posted: ${createdAt.toUTCString()}`} dateTime={createdAt.toISOString()}>
           {format(createdAt, 'h:mm a - MMM d, y')}
         </time>
-      </a>
+      </Link>
       <div className="mt-2 flex text-sm !text-gray-700 dark:!text-gray-300">
-        <a
+        <Link
           className="mr-4 flex items-center !text-gray-500 transition hover:!text-blue-600 hover:!underline"
           href={replyUrl}
           target="_blank"
@@ -130,8 +130,8 @@ export default function Tweet({
               notation: 'compact',
             })}
           </span>
-        </a>
-        <a
+        </Link>
+        <Link
           className="mr-4 flex items-center !text-gray-500 transition hover:!text-green-600 hover:!underline"
           href={retweetUrl}
           target="_blank"
@@ -148,8 +148,8 @@ export default function Tweet({
               notation: 'compact',
             })}
           </span>
-        </a>
-        <a
+        </Link>
+        <Link
           className="flex items-center !text-gray-500 transition hover:!text-red-600 hover:!underline"
           href={likeUrl}
           target="_blank"
@@ -166,7 +166,7 @@ export default function Tweet({
               notation: 'compact',
             })}
           </span>
-        </a>
+        </Link>
       </div>
     </div>
   )

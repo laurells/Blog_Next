@@ -7,6 +7,7 @@ import siteMetadata from '@/data/siteMetadata'
 import { PageSEO } from '@/components/SEO'
 import TopTracks from '@/components/TopTracks'
 import NowPlaying from '@/components/NowPlaying'
+import Link from '@/components/Link'
 
 export default function Stats() {
   return (
@@ -43,7 +44,7 @@ export default function Stats() {
           My <span className="text-green-500">Spotify</span> Top Songs
         </h2>
         <p className="text-md mb-4 text-gray-600 dark:text-gray-400">
-          Curious what I'm currently jamming to? Here's my top tracks on Spotify updated daily.
+          Curious what I am currently jamming to? Here is my top tracks on Spotify updated daily.
         </p>
         <div>
           <NowPlaying />
@@ -53,7 +54,7 @@ export default function Stats() {
           <p className="text-md text-gray-600 dark:text-gray-400">
             Do you know a good song I should listen to?
           </p>
-          <a
+          <Link
             className="text-md mt-4 rounded-full border px-8 py-2 text-center font-normal text-gray-800 transition-colors hover:border-green-600 hover:bg-green-600 hover:text-white dark:text-gray-200"
             href="https://twitter.com/messages/compose?recipient_id=4302974298&text=Hey Parth, you should listen to:"
             data-screen-name="@_ParthDesai_"
@@ -61,7 +62,7 @@ export default function Stats() {
             rel="noreferrer noopener"
           >
             Laurels you should listen to...
-          </a>
+          </Link>
         </div>
       </div>
     </>

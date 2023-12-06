@@ -6,7 +6,7 @@ import Router from 'next/router'
  * Re-triggers getStaticProps when watched mdx files change
  *
  */
-export const ClientReload = () => {
+const ClientReload = () => {
   // Exclude socket.io from prod bundle
   useEffect(() => {
     import('socket.io-client').then((module) => {
@@ -21,3 +21,5 @@ export const ClientReload = () => {
 
   return null
 }
+
+export default ClientReload

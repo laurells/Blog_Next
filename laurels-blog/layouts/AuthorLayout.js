@@ -6,6 +6,7 @@ import experienceData from '@/data/experienceData'
 import { RoughNotation } from 'react-rough-notation'
 import { AiOutlineTwitter } from 'react-icons/ai'
 
+
 export default function AuthorLayout({ children, frontMatter }) {
   const {
     name,
@@ -35,8 +36,8 @@ export default function AuthorLayout({ children, frontMatter }) {
             <Image
               src={avatar}
               alt="avatar"
-              width="192px"
-              height="192px"
+              width="192"
+              height="192"
               className="h-48 w-48 rounded-full xl:rounded-full"
               placeholder="blur"
               blurDataURL="/static/images/SVG-placeholder.png"
@@ -45,7 +46,7 @@ export default function AuthorLayout({ children, frontMatter }) {
             <div className="text-gray-500 dark:text-gray-400">{occupation}</div>
             <div className="text-gray-500 dark:text-gray-400">{company}</div>
             <div className="flex flex-col pt-3">
-              <a
+              <Link
                 className="rounded-full border px-8 py-2 text-center text-sm font-light text-gray-700 transition-colors hover:border-[#1DA1F2] hover:bg-[#1DA1F2] hover:text-white hover:shadow dark:text-white"
                 href="#"
                 data-screen-name="@Laurels_"
@@ -54,7 +55,7 @@ export default function AuthorLayout({ children, frontMatter }) {
               >
                 <AiOutlineTwitter className="mr-2 mb-0.5 inline h-5 w-5" />
                 Say Hi!
-              </a>
+              </Link>
             </div>
           </div>
           <div className="prose max-w-none pt-8 pb-8 dark:prose-dark xl:col-span-2">
@@ -204,7 +205,7 @@ export default function AuthorLayout({ children, frontMatter }) {
                     href={'https://github.com/timlrx/tailwind-nextjs-starter-blog'}
                     className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
                   >
-                    Timothy's Next.js and Tailwind CSS template
+                    Timothys Next.js and Tailwind CSS template
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"

@@ -7,6 +7,7 @@ import {
   } from 'react-icons/ai'
   import { FaLinkedinIn } from 'react-icons/fa'
   import { FiExternalLink, FiMail } from 'react-icons/fi'
+  import Link from 'next/link'
   
   const components = {
     mail: FiMail,
@@ -25,7 +26,7 @@ import {
     const SocialSvg = components[kind]
   
     return (
-      <a
+      <Link
         className="text-sm text-gray-500 transition duration-200 hover:rotate-180 hover:text-gray-600"
         target="_blank"
         rel="noopener noreferrer"
@@ -35,7 +36,7 @@ import {
         <SocialSvg
           className={`text-gray-700 hover:text-primary-color-500 dark:text-gray-200 dark:hover:text-primary-color-dark-500 h-${size} w-${size}`}
         />
-      </a>
+      </Link>
     )
   }
   

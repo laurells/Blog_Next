@@ -75,7 +75,7 @@ export default function Recommends(reviews) {
               </span>
               Movies
             </h2>
-            <p className="text-md leading-7 text-gray-500 dark:text-gray-400">Life's a Movie.</p>
+            <p className="text-md leading-7 text-gray-500 dark:text-gray-400">Life is a Movie.</p>
           </div>
           <div className="container py-4">
             <div className="-m-4 flex flex-wrap">

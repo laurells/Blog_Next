@@ -2,6 +2,7 @@ import useSWR from 'swr'
 import { useEffect } from 'react'
 import { animate } from 'motion'
 import fetcher from 'lib/fetcher'
+import Link from '@/components/Link'
 
 function AnimatedBars() {
   useEffect(() => {
@@ -97,14 +98,14 @@ export default function NowPlaying() {
       )}
       <div className="inline-flex w-full max-w-full flex-col truncate sm:flex-row">
         {data?.songUrl ? (
-          <a
+          <Link
             className="capsize max-w-max truncate font-medium  text-gray-800 dark:text-gray-200"
             href={data.songUrl}
             target="_blank"
             rel="noopener noreferrer"
           >
             {data.title}
-          </a>
+          </Link>
         ) : (
           <p className="capsize font-medium text-gray-800 dark:text-gray-200">Not Playing</p>
         )}

@@ -145,7 +145,7 @@ export default function Now(currentlyReading) {
               <br />
               <span className="ml-2 font-semibold">Weather:</span>{' '}
               <span>
-                <a
+                <Link
                   href="https://weather.com/en-GB/weather/today/l/f42d9f8baa19b4d8d5e034449faa703839993366f64551a56a2b530297075dc2"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -154,13 +154,13 @@ export default function Now(currentlyReading) {
                   {icons[`_${weatherIcon}`]} Currently <b>{parseInt(temperature)}°C</b>
                   {' with '}
                   <span>{weatherDescription}</span>
-                </a>
+                </Link>
               </span>
             </div>
 
             <div className="mt-2 mb-10 w-1/2 rounded-md border border-gray-600 p-1 text-sm dark:border-gray-200">
               <span className="ml-2 font-semibold">Reading:</span>{' '}
-              <a
+              <Link
                 href={currentlyReadingData[0].url}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -168,7 +168,7 @@ export default function Now(currentlyReading) {
               >
                 <span>{currentlyReadingData[0].title}</span> by{' '}
                 <span>{currentlyReadingData[0].author}</span>
-              </a>
+              </Link>
               <br />
               <span className="ml-2 font-semibold">Age:</span> <span>{ageString}</span>
             </div>
@@ -190,14 +190,14 @@ export default function Now(currentlyReading) {
               <span className="ml-2 font-semibold">Listening:</span>{' '}
               <span>
                 {data?.songUrl ? (
-                  <a
+                  <Link
                     href={data.songUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="underline-offset-1 hover:underline"
                   >
                     <span>{data.title}</span>
-                  </a>
+                  </Link>
                 ) : (
                   <span>Not Playing</span>
                 )}
@@ -238,7 +238,7 @@ export default function Now(currentlyReading) {
           </p>
           <br />
           <p>
-            I'm always trying to learn more, and at the moment I'm trying to follow this{' '}
+            I am always trying to learn more, and at the moment I am trying to follow this{' '}
             <Link
               href={
                 'https://www.youtube.com/watch?v=_u-PaJCpwiU&list=PLu0W_9lII9ai6fAMHp-acBmJONT7Y4BSG'
@@ -257,7 +257,7 @@ export default function Now(currentlyReading) {
         {/* Personal life */}
         <div className="pt-6">
           <p>
-            I've been slowly building this website, trying to share interesting things with anyone
+            I have been slowly building this website, trying to share interesting things with anyone
             who wants to read it.{' '}
             <Link
               href={'https://www.swyx.io/learn-in-public'}
@@ -270,12 +270,12 @@ export default function Now(currentlyReading) {
           <br />
           <p>
             I am also going to start applying for Masters in Data Science in August 2022 for intake
-            of Fall 2023. I hope to get a good university near the West Coast. I'll update this page
+            of Fall 2023. I hope to get a good university near the West Coast. I will update this page
             after I get my admits.
           </p>
           <br />
           <p>
-            I recently started to draft a post about my new Obsidian worklfow, it will be a good
+            I recently started to draft a post about my new Stripe Payment flow, it will be a good
             one!
           </p>
         </div>

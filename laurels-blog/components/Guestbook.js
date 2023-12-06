@@ -3,7 +3,7 @@ import { useState, useRef, Suspense } from 'react'
 import { format } from 'date-fns'
 import { signIn, useSession } from 'next-auth/react'
 import useSWR, { useSWRConfig } from 'swr'
-
+import Link from '@/components/Link'
 import fetcher from '@/lib/fetcher'
 import SuccessMessage from '@/components/SuccessMessage'
 import ErrorMessage from '@/components/ErrorMessage'
@@ -102,7 +102,7 @@ export default function Guestbook({ fallbackData }) {
         </div>
         {!session && (
           <div className="flex flex-row">
-            <a
+            <Link
               href="/api/auth/signin/github"
               className="my-4 mx-2 flex h-20 w-1/2 items-center justify-center rounded bg-neutral-100 font-light text-gray-900 ring-gray-300 transition-all hover:ring-2 dark:bg-zinc-800 dark:text-gray-100"
               onClick={(e) => {
@@ -121,9 +121,8 @@ export default function Guestbook({ fallbackData }) {
                   <div className="mb-2 dark:text-neutral-300">Github</div>
                 </div>
               )}
-            </a>
-            <a
-              href="/api/auth/signin/google"
+            </Link>
+            <Link              href="/api/auth/signin/google"
               className="my-4 mx-2 flex h-20 w-1/2 items-center justify-center rounded bg-neutral-100 font-light text-gray-900 ring-gray-300 transition-all hover:ring-2 dark:bg-zinc-800 dark:text-gray-100"
               onClick={(e) => {
                 e.preventDefault()
@@ -141,7 +140,7 @@ export default function Guestbook({ fallbackData }) {
                   <div className="mb-2 dark:text-neutral-300">Google</div>
                 </div>
               )}
-            </a>
+            </Link>
           </div>
         )}
         {session?.user && (

@@ -30,9 +30,9 @@ const ScrollTop = () => {
       >
         <span className="shadow"></span>
         <span className="edge"></span>
-        <span className="front">
+        {/* <span className="front">
           <TbArrowBigTop className="h-5 w-5" />
-        </span>
+        </span> */}
       </button>
     </div>
   )
